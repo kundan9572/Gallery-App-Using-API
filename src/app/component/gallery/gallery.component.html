@@ -1,0 +1,10 @@
+<div style="text-align:center">
+<h1>Welcome to our Image Gallery!!!</h1>
+<button (click)= "getImage()">Fetch Data</button>
+<div *ngFor= "let image of image" class="gallery">
+    <a target="_blank" [href]="image.href">
+        <img [src]="image.thumbnailUrl" height="200" width="300">
+    </a>
+    <div class="desc">{{ image.title }}</div>
+</div>
+</div>
